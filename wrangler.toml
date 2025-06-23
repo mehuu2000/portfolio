@@ -1,0 +1,4 @@
+name = "portfolio" # あなたのプロジェクト名
+compatibility_date = "2025-06-23" # 現在の日付（デプロイする時点の日付かそれ以降）
+compatibility_flags = ["nodejs_compat"] # Node.jsの互換性APIを有効にする
+pages_build_output_dir = ".vercel/output/static" # Next.js App Routerのデフォルト
