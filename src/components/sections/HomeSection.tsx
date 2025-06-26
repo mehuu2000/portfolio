@@ -23,7 +23,9 @@ export default function HomeSection() {
             </div>
             <div className={styles.titleContainer}>
               <h1>Welcome to My Portfolio</h1>
-              <p className={styles.nameText}>濱田真仁</p>
+              <div className={styles.nameWrapper}>
+                <p className={styles.nameText}>濱田真仁</p>
+              </div>
             </div>
           </div>
           <div className={styles.heroFooter}>
