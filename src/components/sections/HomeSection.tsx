@@ -21,7 +21,10 @@ export default function HomeSection() {
                 priority
               />
             </div>
-            <h1>Welcome to My Portfolio</h1>
+            <div className={styles.titleContainer}>
+              <h1>Welcome to My Portfolio</h1>
+              <p className={styles.nameText}>濱田真仁</p>
+            </div>
           </div>
           <div className={styles.heroFooter}>
             <Link href="/site" className={styles.subtleLink}>
