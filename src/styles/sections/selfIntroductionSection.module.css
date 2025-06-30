@@ -1,0 +1,437 @@
+.section {
+  min-height: calc(100vh - 70px);
+  padding: 3rem 1.5rem;
+  background: linear-gradient(135deg, #f5f7fa, #e4ecf7);
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.titleContainer {
+  position: relative;
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+
+.sectionTitle {
+  font-size: 2.5rem;
+  margin: 0 auto;
+  background: linear-gradient(135deg, #2193b0, #6dd5ed);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+  font-weight: bold;
+  display: inline-block;
+}
+
+.dateInfo {
+  position: absolute;
+  bottom: -1.2rem;
+  right: 0;
+  font-size: 0.9rem;
+  color: #2193b0; /* テーマカラーの基本色に変更 */
+  font-weight: 500;
+}
+
+/* プロフィールカード */
+.profileCard {
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+  overflow: hidden;
+  margin-bottom: 3rem;
+}
+
+.profileHeader {
+  background: linear-gradient(135deg, #2193b0, #6dd5ed);
+  padding: 1.5rem 2rem;
+  color: white;
+}
+
+.profileHeader h3 {
+  margin: 0;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.profileContent {
+  padding: 2rem;
+}
+
+.profileList {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 1.5rem;
+}
+
+.profileList li {
+  padding: 0.5rem 0;
+  border-bottom: 1px solid #eee;
+  font-size: 1.1rem;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.profileList li:last-child {
+  border-bottom: none;
+}
+
+.label {
+  font-weight: 600;
+  color: #2193b0;
+  margin-right: 0.5rem;
+  min-width: 5rem;
+}
+
+.profileDesc {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #555;
+}
+
+/* スキルカードのスタイル - 幅広カード用 */
+.skillCard {
+  background: white;
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 3rem;
+}
+
+.skillCard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+.skillCard h3 {
+  font-size: 1.4rem;
+  color: #2193b0;
+  margin: 1rem 0 1.2rem;
+  text-align: center;
+}
+
+/* 情報グリッド */
+.infoGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 3rem;
+}
+
+/* 共通カードスタイル */
+.infoCard {
+  background: white;
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.infoCard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+.infoCard h3 {
+  font-size: 1.4rem;
+  color: #2193b0;
+  margin: 1rem 0 1.2rem;
+  text-align: center;
+}
+
+.cardIcon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 60px;
+  height: 60px;
+  margin: 0 auto 0.5rem;
+  border-radius: 50%;
+  background: rgba(33, 147, 176, 0.1);
+  color: #2193b0;
+}
+
+.cardIcon svg {
+  font-size: 1.8rem;
+}
+
+/* スキル関連 */
+.skillList {
+  display: none; /* 使われないスタイルを非表示に */
+}
+
+.skillList li {
+  margin-bottom: 0.8rem;
+  line-height: 1.5;
+}
+
+.skillGroups {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  width: 100%;
+}
+
+/* レスポンシブ対応 - 大画面ではスキルグループを2列に */
+@media (min-width: 768px) {
+  .skillGroups {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+  }
+}
+
+.skillGroup {
+  margin-bottom: 0.5rem;
+}
+
+.skillCategory {
+  font-weight: 600;
+  color: #2193b0;
+  margin: 0 0 0.5rem 0;
+  font-size: 1.1rem;
+  border-bottom: 1px solid rgba(33, 147, 176, 0.2);
+  padding-bottom: 0.3rem;
+}
+
+.skillItems {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 1rem;
+  margin-left: 0.5rem;
+}
+
+/* アイコンなしのスキルアイテムスタイル */
+.skillItem {
+  display: inline-block;
+  background-color: rgba(33, 147, 176, 0.05);
+  border-radius: 4px;
+  padding: 0.3rem 0.8rem;
+  font-size: 0.95rem;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+  margin: 0.25rem;
+}
+
+.skillItem:hover {
+  background-color: rgba(33, 147, 176, 0.1);
+  transform: translateY(-2px);
+}
+
+/* 不要になったアイコン関連スタイル */
+.techIcon {
+  display: none;
+}
+
+.techIconImg {
+  display: none;
+}
+
+/* 趣味タグ */
+.hobbyTags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+}
+
+.hobbyTag {
+  background: linear-gradient(135deg, rgba(33, 147, 176, 0.1), rgba(109, 213, 237, 0.2));
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-size: 0.95rem;
+}
+
+/* 強み */
+.strengthText {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  text-align: center;
+}
+
+.highlight {
+  font-weight: 600;
+  color: #2193b0;
+}
+
+/* 学習カード - 改善版 */
+.learningCard {
+  background: white;
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.learningCard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+.learningCard h3 {
+  font-size: 1.4rem;
+  color: #2193b0;
+  margin: 1rem 0 1.5rem;
+  text-align: center;
+}
+
+/* 学習カテゴリのレイアウト */
+.learningCategories {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+}
+
+.learningCategory {
+  margin-bottom: 1rem;
+}
+
+.learningCategoryTitle {
+  font-weight: 600;
+  color: #2193b0;
+  font-size: 1.1rem;
+  margin: 0 0 0.8rem 0;
+  padding-bottom: 0.3rem;
+  border-bottom: 1px solid rgba(33, 147, 176, 0.2);
+}
+
+/* リストスタイルの改善 */
+.categorizedList {
+  list-style-type: none;
+  padding-left: 0.5rem;
+}
+
+.categorizedList li {
+  position: relative;
+  padding: 0.5rem 0.5rem 0.5rem 1.2rem;
+  line-height: 1.5;
+  margin-bottom: 0.5rem;
+  transition: transform 0.2s ease;
+}
+
+.categorizedList li:before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: #2193b0;
+}
+
+.categorizedList li:hover {
+  transform: translateX(3px);
+  color: #2193b0;
+}
+
+/* 補足情報のスタイル */
+.note {
+  display: block;
+  font-size: 0.85rem;
+  color: #666;
+  margin-top: 0.2rem;
+  font-style: italic;
+}
+
+/* 古いlearningList関連のスタイル（後方互換性のため残す） */
+.learningList {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 0.8rem 2rem;
+  padding-left: 1.2rem;
+}
+
+.learningList li {
+  line-height: 1.6;
+}
+
+.profileHeaderContent {
+  display: flex;
+  align-items: center;
+}
+
+.headerIcon {
+  margin-right: 1rem;
+  display: flex;
+  align-items: center;
+}
+
+.headerIcon svg {
+  font-size: 1.8rem;
+  color: white;
+}
+
+/* レスポンシブ対応 */
+@media (max-width: 768px) {
+  .section {
+    padding: 2rem 1rem;
+  }
+
+  .titleContainer {
+    margin-bottom: 3rem; /* 日付のスペースを確保 */
+  }
+  
+  .sectionTitle {
+    font-size: 2rem;
+  }
+  
+  .dateInfo {
+    font-size: 0.85rem;
+    bottom: -1.5rem;
+    right: 0;
+  }
+
+  .infoGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .learningList {
+    grid-template-columns: 1fr;
+  }
+  
+  .profileHeader {
+    padding: 1.2rem 1.5rem;
+  }
+  
+  .profileContent {
+    padding: 1.5rem;
+  }
+  
+  .label {
+    min-width: 100%;
+    margin-bottom: 0.3rem;
+  }
+
+  .headerIcon {
+    margin-right: 0.7rem;
+  }
+  
+  .headerIcon svg {
+    font-size: 1.5rem;
+  }
+  
+  .skillItems {
+    margin-left: 0;
+  }
+
+  /* スキルカードがモバイルでは1列表示になるよう調整 */
+  .skillGroups {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  /* 学習カテゴリのモバイル調整 */
+  .learningCategories {
+    grid-template-columns: 1fr;
+  }
+  
+  .categorizedList li {
+    padding: 0.4rem 0.5rem 0.4rem 1.2rem;
+  }
+}
