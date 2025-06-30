@@ -1,5 +1,5 @@
 .section {
-  min-height: 100vh;
+  min-height: 60vh;
   padding: 6rem 2rem;
   display: flex;
   flex-direction: column;
@@ -8,19 +8,257 @@
   scroll-margin-top: 70px;
 }
 
-.section h2 {
+.container {
+  width: 100%;
+  max-width: 800px;
+}
+
+.title {
   font-size: 2.5rem;
-  margin-bottom: 2.5rem;
-  color: #2193b0;
+  margin-bottom: 1rem;
+  background: linear-gradient(135deg, #2193b0, #6dd5ed);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
   font-weight: bold;
   text-align: center;
 }
 
-.contactForm {
-  width: 100%;
-  max-width: 500px;
+.subtitle {
+  text-align: center;
+  margin-bottom: 2.5rem;
+  color: #666;
+  font-size: 1.1rem;
+}
+
+.contactCard {
   background-color: white;
+  border-radius: 16px;
+  padding: 2.5rem;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contactCard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+}
+
+.contactMethod {
+  display: flex;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.iconWrapper {
+  background: linear-gradient(135deg, rgba(33, 147, 176, 0.1), rgba(109, 213, 237, 0.2));
+  width: 60px;
+  height: 60px;
   border-radius: 12px;
-  padding: 2rem;
-  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 1.5rem;
+}
+
+.iconWrapper svg {
+  color: #2193b0;
+  font-size: 2rem;
+}
+
+.contactDetails h3 {
+  margin: 0 0 0.5rem 0;
+  font-size: 1.2rem;
+  color: #333;
+}
+
+.contactDetails a {
+  color: #2193b0;
+  text-decoration: none;
+  font-size: 1.1rem;
+  transition: color 0.2s;
+}
+
+.contactDetails a:hover {
+  color: #6dd5ed;
+  text-decoration: underline;
+}
+
+.separator {
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(33, 147, 176, 0.2), transparent);
+  margin: 2rem 0;
+}
+
+.socialLinks {
+  margin-bottom: 2rem;
+}
+
+.socialLinks h3 {
+  margin: 0 0 1.5rem 0;
+  font-size: 1.2rem;
+  color: #333;
+  text-align: center;
+}
+
+.socialGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 1rem;
+}
+
+.socialLink {
+  display: flex;
+  align-items: center;
+  padding: 0.8rem 1rem;
+  border-radius: 8px;
+  text-decoration: none;
+  color: #333;
+  transition: all 0.2s ease;
+  background: rgba(33, 147, 176, 0.05);
+}
+
+.socialLink:hover {
+  background: rgba(33, 147, 176, 0.1);
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(33, 147, 176, 0.15);
+}
+
+.socialLink svg {
+  font-size: 1.5rem;
+  color: #2193b0;
+  margin-right: 0.8rem;
+}
+
+.note {
+  padding-top: 1.5rem;
+  border-top: 1px dashed rgba(33, 147, 176, 0.2);
+  font-size: 0.9rem;
+  color: #666;
+  font-style: italic;
+}
+
+.note p {
+  margin: 0.5rem 0;
+}
+
+/* URLを表示するための新しいスタイル */
+.socialList {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  width: 100%;
+}
+
+.socialItem {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding: 1rem;
+  border-radius: 8px;
+  background: rgba(33, 147, 176, 0.05);
+  transition: all 0.2s ease;
+}
+
+.socialItem:hover {
+  background: rgba(33, 147, 176, 0.1);
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(33, 147, 176, 0.15);
+}
+
+.socialIconTitle {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+.socialIcon {
+  font-size: 1.5rem;
+  color: #2193b0;
+}
+
+.socialTitle {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #333;
+}
+
+.socialUrl {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  margin-left: 2.3rem;
+}
+
+.linkIcon {
+  font-size: 1rem;
+  color: #666;
+}
+
+.socialUrl a {
+  color: #2193b0;
+  text-decoration: none;
+  font-size: 0.9rem;
+  word-break: break-all;
+  transition: color 0.2s;
+}
+
+.socialUrl a:hover {
+  color: #6dd5ed;
+  text-decoration: underline;
+}
+
+/* レスポンシブ対応 */
+@media (max-width: 600px) {
+  .section {
+    padding: 4rem 1.2rem;
+  }
+  
+  .title {
+    font-size: 2rem;
+  }
+  
+  .contactCard {
+    padding: 1.5rem;
+  }
+  
+  .contactMethod {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .iconWrapper {
+    margin-right: 0;
+    margin-bottom: 1rem;
+  }
+  
+  .socialGrid {
+    grid-template-columns: 1fr;
+    gap: 0.8rem;
+  }
+  
+  .socialItem {
+    padding: 0.8rem;
+  }
+  
+  .socialIconTitle {
+    gap: 0.6rem;
+  }
+  
+  .socialIcon {
+    font-size: 1.3rem;
+  }
+  
+  .socialTitle {
+    font-size: 1rem;
+  }
+  
+  .socialUrl {
+    margin-left: 1.9rem;
+  }
+  
+  .socialUrl a {
+    font-size: 0.85rem;
+  }
 }
