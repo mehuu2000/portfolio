@@ -3,7 +3,7 @@
 import React from 'react';
 import { useRouter } from 'next/navigation';
 import Image from 'next/image';
-import { ArrowBack, LightbulbOutlined, ArrowForward } from '@mui/icons-material';
+import { ArrowBack, LightbulbOutlined, ArrowForward, GitHub } from '@mui/icons-material';
 import styles from '@/styles/projects/tabitomo.module.css';
 
 export default function TabitomoPage() {
@@ -16,7 +16,8 @@ export default function TabitomoPage() {
     summary: '旅行先・観光先をAIなどを使ってオススメし、旅行計画を立てるWebアプリケーションです。',
     members: '個人開発',
     role: '全て',
-    tags: ['Next.js', 'TypeScript', 'PostgreSQL', 'Flask', 'FastAPI', 'AI']
+    tags: ['Next.js', 'TypeScript', 'PostgreSQL', 'Flask', 'FastAPI', 'AI'],
+    githubUrl: 'https://github.com/mehuu2000/tabinoOtomo'
   };
 
   return (
@@ -66,6 +67,23 @@ export default function TabitomoPage() {
                 {project.tags.map((tag, index) => (
                   <span key={index} className={styles.tag}>{tag}</span>
                 ))}
+              </div>
+            </div>
+          )}
+          {/* GitHubリポジトリへのリンク */}
+          {project.githubUrl && (
+            <div className={styles.detailItem}>
+              <h3>リポジトリ</h3>
+              <div className={styles.repoLink}>
+                <a 
+                  href={project.githubUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={styles.githubLink}
+                >
+                  <GitHub className={styles.githubIcon} />
+                  <span>GitHubでコードを見る</span>
+                </a>
               </div>
             </div>
           )}

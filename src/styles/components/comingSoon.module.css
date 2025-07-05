@@ -78,6 +78,62 @@
   line-height: 1.6;
 }
 
+/* リソースセクションのスタイル */
+.resourcesSection {
+  width: 100%;
+  max-width: 700px;
+  margin: 1.5rem auto;
+  padding: 1.5rem;
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(33, 147, 176, 0.08);
+  border: 1px solid rgba(33, 147, 176, 0.1);
+}
+
+.resourcesTitle {
+  color: #2193b0;
+  font-size: 1.4rem;
+  margin: 0 0 1rem 0;
+  text-align: center;
+}
+
+.resourcesList {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.resourceLink {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.8rem 1.2rem;
+  background: linear-gradient(to right, rgba(33, 147, 176, 0.05), rgba(109, 213, 237, 0.05));
+  border-radius: 8px;
+  text-decoration: none;
+  color: #2193b0;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  border: 1px solid transparent;
+}
+
+.resourceLink:hover {
+  background: white;
+  box-shadow: 0 2px 8px rgba(33, 147, 176, 0.12);
+  transform: translateY(-2px);
+  border-color: rgba(33, 147, 176, 0.2);
+}
+
+.resourceLabel {
+  flex: 1;
+}
+
+.externalLinkIcon {
+  margin-left: 0.5rem;
+  font-size: 0.9rem;
+  opacity: 0.7;
+}
+
 .imageContainer {
   margin: 2rem 0;
   animation: float 6s ease-in-out infinite;
@@ -158,6 +214,18 @@
   .constructionIcon {
     font-size: 2rem;
   }
+  
+  .resourcesSection {
+    padding: 1.2rem;
+  }
+  
+  .resourcesTitle {
+    font-size: 1.3rem;
+  }
+  
+  .resourceLink {
+    padding: 0.7rem 1rem;
+  }
 }
 
 @media (max-width: 480px) {
@@ -173,5 +241,18 @@
   
   .title {
     font-size: 1.8rem;
+  }
+  
+  .resourcesSection {
+    padding: 1rem;
+  }
+  
+  .resourcesTitle {
+    font-size: 1.2rem;
+  }
+  
+  .resourceLink {
+    padding: 0.6rem 0.8rem;
+    font-size: 0.9rem;
   }
 }
