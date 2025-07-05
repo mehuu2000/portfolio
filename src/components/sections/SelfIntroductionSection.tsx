@@ -65,6 +65,7 @@ export default function SelfIntroductionSection() {
               <h4 className={styles.skillCategory}>データベース</h4>
               <div className={styles.skillItems}>
                 <div className={styles.skillItem}>PostgreSQL</div>
+                <div className={styles.skillItem}>MySQL</div>
               </div>
             </div>
             
