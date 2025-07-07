@@ -130,7 +130,7 @@ export default function SelfIntroductionSection() {
             <div className={styles.learningCategory}>
               <h4 className={styles.learningCategoryTitle}>プログラミング言語</h4>
               <ul className={styles.categorizedList}>
-                <li>Golangの学習</li>
+                <li>Goの学習</li>
                 <li>Rust, PHP, Rubyなどの理解<span className={styles.note}>(参加や就職する企業で柔軟に切り替える予定)</span></li>
                 <li>C++の学習</li>
               </ul>
